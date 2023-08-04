@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ZYKT"
-  s.version      = "1.0.0"
+  s.version      = "0.1.0"
   s.summary      = "ZYKT for iOS"
   s.description  = <<-DESC
                    ZYKT for iOS
@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "objcat" => "objcat2024@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.source       = { :git => 'https://github.com/objcat/ZYKT', :tag => s.version }
+  s.source       = { :git => 'https://github.com/objcat/ZYKT', :tag => s.version.to_s }
   s.requires_arc = true
   s.source_files  = "ZYKT/*.{h,m}"
 end
