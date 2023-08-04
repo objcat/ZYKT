@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D2F7D3D2A7C9E5300FFE961 /* Student.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D3B2A7C9E5300FFE961 /* Student.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D2F7D3E2A7C9E5300FFE961 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D3C2A7C9E5300FFE961 /* Student.m */; };
-		2D69C2D32A7BAC9700BFA76B /* ZYKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D69C2D22A7BAC9700BFA76B /* ZYKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2F7D552A7CCD4E00FFE961 /* Student.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D532A7CCD4E00FFE961 /* Student.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2F7D562A7CCD4E00FFE961 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D542A7CCD4E00FFE961 /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D2F7D3B2A7C9E5300FFE961 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		2D2F7D3C2A7C9E5300FFE961 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
-		2D69C2CF2A7BAC9700BFA76B /* ZYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D69C2D22A7BAC9700BFA76B /* ZYKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKit.h; sourceTree = "<group>"; };
+		2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYKT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKT.h; sourceTree = "<group>"; };
+		2D2F7D532A7CCD4E00FFE961 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		2D2F7D542A7CCD4E00FFE961 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2D69C2CC2A7BAC9700BFA76B /* Frameworks */ = {
+		2D2F7D462A7CCD4400FFE961 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -30,80 +30,80 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D69C2C52A7BAC9700BFA76B = {
+		2D2F7D3F2A7CCD4400FFE961 = {
 			isa = PBXGroup;
 			children = (
-				2D69C2D12A7BAC9700BFA76B /* ZYKit */,
-				2D69C2D02A7BAC9700BFA76B /* Products */,
+				2D2F7D4B2A7CCD4400FFE961 /* ZYKT */,
+				2D2F7D4A2A7CCD4400FFE961 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2D69C2D02A7BAC9700BFA76B /* Products */ = {
+		2D2F7D4A2A7CCD4400FFE961 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2D69C2CF2A7BAC9700BFA76B /* ZYKit.framework */,
+				2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2D69C2D12A7BAC9700BFA76B /* ZYKit */ = {
+		2D2F7D4B2A7CCD4400FFE961 /* ZYKT */ = {
 			isa = PBXGroup;
 			children = (
-				2D69C2D22A7BAC9700BFA76B /* ZYKit.h */,
-				2D2F7D3B2A7C9E5300FFE961 /* Student.h */,
-				2D2F7D3C2A7C9E5300FFE961 /* Student.m */,
+				2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */,
+				2D2F7D532A7CCD4E00FFE961 /* Student.h */,
+				2D2F7D542A7CCD4E00FFE961 /* Student.m */,
 			);
-			path = ZYKit;
+			path = ZYKT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D69C2CA2A7BAC9700BFA76B /* Headers */ = {
+		2D2F7D442A7CCD4400FFE961 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2F7D3D2A7C9E5300FFE961 /* Student.h in Headers */,
-				2D69C2D32A7BAC9700BFA76B /* ZYKit.h in Headers */,
+				2D2F7D552A7CCD4E00FFE961 /* Student.h in Headers */,
+				2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2D69C2CE2A7BAC9700BFA76B /* ZYKit */ = {
+		2D2F7D482A7CCD4400FFE961 /* ZYKT */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2D69C2D62A7BAC9700BFA76B /* Build configuration list for PBXNativeTarget "ZYKit" */;
+			buildConfigurationList = 2D2F7D502A7CCD4400FFE961 /* Build configuration list for PBXNativeTarget "ZYKT" */;
 			buildPhases = (
-				2D69C2CA2A7BAC9700BFA76B /* Headers */,
-				2D69C2CB2A7BAC9700BFA76B /* Sources */,
-				2D69C2CC2A7BAC9700BFA76B /* Frameworks */,
-				2D69C2CD2A7BAC9700BFA76B /* Resources */,
+				2D2F7D442A7CCD4400FFE961 /* Headers */,
+				2D2F7D452A7CCD4400FFE961 /* Sources */,
+				2D2F7D462A7CCD4400FFE961 /* Frameworks */,
+				2D2F7D472A7CCD4400FFE961 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ZYKit;
-			productName = ZYKit;
-			productReference = 2D69C2CF2A7BAC9700BFA76B /* ZYKit.framework */;
+			name = ZYKT;
+			productName = ZYKT;
+			productReference = 2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2D69C2C62A7BAC9700BFA76B /* Project object */ = {
+		2D2F7D402A7CCD4400FFE961 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					2D69C2CE2A7BAC9700BFA76B = {
+					2D2F7D482A7CCD4400FFE961 = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 2D69C2C92A7BAC9700BFA76B /* Build configuration list for PBXProject "ZYKit" */;
+			buildConfigurationList = 2D2F7D432A7CCD4400FFE961 /* Build configuration list for PBXProject "ZYKT" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,18 +111,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 2D69C2C52A7BAC9700BFA76B;
-			productRefGroup = 2D69C2D02A7BAC9700BFA76B /* Products */;
+			mainGroup = 2D2F7D3F2A7CCD4400FFE961;
+			productRefGroup = 2D2F7D4A2A7CCD4400FFE961 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2D69C2CE2A7BAC9700BFA76B /* ZYKit */,
+				2D2F7D482A7CCD4400FFE961 /* ZYKT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2D69C2CD2A7BAC9700BFA76B /* Resources */ = {
+		2D2F7D472A7CCD4400FFE961 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,18 +132,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2D69C2CB2A7BAC9700BFA76B /* Sources */ = {
+		2D2F7D452A7CCD4400FFE961 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2F7D3E2A7C9E5300FFE961 /* Student.m in Sources */,
+				2D2F7D562A7CCD4E00FFE961 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2D69C2D42A7BAC9700BFA76B /* Debug */ = {
+		2D2F7D4E2A7CCD4400FFE961 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -204,7 +204,7 @@
 			};
 			name = Debug;
 		};
-		2D69C2D52A7BAC9700BFA76B /* Release */ = {
+		2D2F7D4F2A7CCD4400FFE961 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,7 +259,7 @@
 			};
 			name = Release;
 		};
-		2D69C2D72A7BAC9700BFA76B /* Debug */ = {
+		2D2F7D512A7CCD4400FFE961 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -277,7 +277,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.ZYKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.ZYKT;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -285,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		2D69C2D82A7BAC9700BFA76B /* Release */ = {
+		2D2F7D522A7CCD4400FFE961 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -303,7 +303,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.ZYKit;
+				PRODUCT_BUNDLE_IDENTIFIER = com.objcat.ZYKT;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -314,25 +314,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D69C2C92A7BAC9700BFA76B /* Build configuration list for PBXProject "ZYKit" */ = {
+		2D2F7D432A7CCD4400FFE961 /* Build configuration list for PBXProject "ZYKT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D69C2D42A7BAC9700BFA76B /* Debug */,
-				2D69C2D52A7BAC9700BFA76B /* Release */,
+				2D2F7D4E2A7CCD4400FFE961 /* Debug */,
+				2D2F7D4F2A7CCD4400FFE961 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D69C2D62A7BAC9700BFA76B /* Build configuration list for PBXNativeTarget "ZYKit" */ = {
+		2D2F7D502A7CCD4400FFE961 /* Build configuration list for PBXNativeTarget "ZYKT" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D69C2D72A7BAC9700BFA76B /* Debug */,
-				2D69C2D82A7BAC9700BFA76B /* Release */,
+				2D2F7D512A7CCD4400FFE961 /* Debug */,
+				2D2F7D522A7CCD4400FFE961 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2D69C2C62A7BAC9700BFA76B /* Project object */;
+	rootObject = 2D2F7D402A7CCD4400FFE961 /* Project object */;
 }

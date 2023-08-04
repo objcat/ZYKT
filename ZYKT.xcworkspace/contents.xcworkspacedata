@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ZYKitDemo/ZYKitDemo.xcodeproj">
+      location = "group:ZYKT.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:ZYKit.xcodeproj">
+      location = "group:ZYKitDemo/ZYKitDemo.xcodeproj">
    </FileRef>
 </Workspace>
