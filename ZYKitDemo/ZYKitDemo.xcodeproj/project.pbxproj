@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D2F7D3A2A7C9D4B00FFE961 /* ZYKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2F7D392A7C9D4B00FFE961 /* ZYKit.framework */; };
+		2D2F7D602A7CDB0700FFE961 /* ZYKT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D2F7D5F2A7CDB0700FFE961 /* ZYKT.framework */; };
 		2D69C2E72A7BACFB00BFA76B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D69C2E62A7BACFB00BFA76B /* AppDelegate.m */; };
 		2D69C2EA2A7BACFB00BFA76B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D69C2E92A7BACFB00BFA76B /* SceneDelegate.m */; };
 		2D69C2ED2A7BACFB00BFA76B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D69C2EC2A7BACFB00BFA76B /* ViewController.m */; };
@@ -19,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		2D2F7D392A7C9D4B00FFE961 /* ZYKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZYKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D2F7D5F2A7CDB0700FFE961 /* ZYKT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ZYKT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D69C2E22A7BACFB00BFA76B /* ZYKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D69C2E52A7BACFB00BFA76B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2D69C2E62A7BACFB00BFA76B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -38,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2F7D3A2A7C9D4B00FFE961 /* ZYKit.framework in Frameworks */,
+				2D2F7D602A7CDB0700FFE961 /* ZYKT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +49,7 @@
 		2D2F7D382A7C9D4B00FFE961 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D2F7D5F2A7CDB0700FFE961 /* ZYKT.framework */,
 				2D2F7D392A7C9D4B00FFE961 /* ZYKit.framework */,
 			);
 			name = Frameworks;

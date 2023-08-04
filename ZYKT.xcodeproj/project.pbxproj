@@ -8,15 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D2F7D552A7CCD4E00FFE961 /* Student.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D532A7CCD4E00FFE961 /* Student.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D2F7D562A7CCD4E00FFE961 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D542A7CCD4E00FFE961 /* Student.m */; };
+		2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */; };
+		2D2F7D642A7CDB4900FFE961 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D622A7CDB4900FFE961 /* Student.m */; };
+		2D2F7D652A7CDB4900FFE961 /* Student.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D632A7CDB4900FFE961 /* Student.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYKT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKT.h; sourceTree = "<group>"; };
-		2D2F7D532A7CCD4E00FFE961 /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
-		2D2F7D542A7CCD4E00FFE961 /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
+		2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
+		2D2F7D622A7CDB4900FFE961 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		2D2F7D632A7CDB4900FFE961 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,8 @@
 		2D2F7D3F2A7CCD4400FFE961 = {
 			isa = PBXGroup;
 			children = (
+				2D2F7D612A7CDB4900FFE961 /* Student */,
+				2D2F7D5A2A7CDABA00FFE961 /* ZYUserDefaults */,
 				2D2F7D4B2A7CCD4400FFE961 /* ZYKT */,
 				2D2F7D4A2A7CCD4400FFE961 /* Products */,
 			);
@@ -50,10 +56,26 @@
 			isa = PBXGroup;
 			children = (
 				2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */,
-				2D2F7D532A7CCD4E00FFE961 /* Student.h */,
-				2D2F7D542A7CCD4E00FFE961 /* Student.m */,
 			);
 			path = ZYKT;
+			sourceTree = "<group>";
+		};
+		2D2F7D5A2A7CDABA00FFE961 /* ZYUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */,
+				2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */,
+			);
+			path = ZYUserDefaults;
+			sourceTree = "<group>";
+		};
+		2D2F7D612A7CDB4900FFE961 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				2D2F7D622A7CDB4900FFE961 /* Student.m */,
+				2D2F7D632A7CDB4900FFE961 /* Student.h */,
+			);
+			path = Student;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,8 +85,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2F7D552A7CCD4E00FFE961 /* Student.h in Headers */,
 				2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */,
+				2D2F7D652A7CDB4900FFE961 /* Student.h in Headers */,
+				2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D2F7D562A7CCD4E00FFE961 /* Student.m in Sources */,
+				2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */,
+				2D2F7D642A7CDB4900FFE961 /* Student.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

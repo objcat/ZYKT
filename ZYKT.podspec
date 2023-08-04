@@ -11,5 +11,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => 'https://github.com/objcat/ZYKT', :tag => s.version }
   s.requires_arc = true
-  s.source_files  = "ZYKT/*.{h,m}"
+
+  s.subspec 'ZYUserDefaults' do |zyud|
+    zyud.source_files = 'ZYUserDefaults/*.{h,m}'
+  end
+
 end
