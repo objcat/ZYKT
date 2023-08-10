@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D1FD83B2A847CC500E5A48B /* ZYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1FD8392A847CC500E5A48B /* ZYDeviceManager.m */; };
+		2D1FD83C2A847CC500E5A48B /* ZYDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1FD83A2A847CC500E5A48B /* ZYDeviceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D1FD8392A847CC500E5A48B /* ZYDeviceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYDeviceManager.m; sourceTree = "<group>"; };
+		2D1FD83A2A847CC500E5A48B /* ZYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDeviceManager.h; sourceTree = "<group>"; };
 		2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYKT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKT.h; sourceTree = "<group>"; };
 		2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
@@ -30,9 +34,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D1FD8382A847CC500E5A48B /* ZYDeviceManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D1FD83A2A847CC500E5A48B /* ZYDeviceManager.h */,
+				2D1FD8392A847CC500E5A48B /* ZYDeviceManager.m */,
+			);
+			path = ZYDeviceManager;
+			sourceTree = "<group>";
+		};
 		2D2F7D3F2A7CCD4400FFE961 = {
 			isa = PBXGroup;
 			children = (
+				2D1FD8382A847CC500E5A48B /* ZYDeviceManager */,
 				2D2F7D5A2A7CDABA00FFE961 /* ZYUserDefaults */,
 				2D2F7D4B2A7CCD4400FFE961 /* ZYKT */,
 				2D2F7D4A2A7CCD4400FFE961 /* Products */,
@@ -72,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */,
+				2D1FD83C2A847CC500E5A48B /* ZYDeviceManager.h in Headers */,
 				2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D1FD83B2A847CC500E5A48B /* ZYDeviceManager.m in Sources */,
 				2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -202,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -257,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

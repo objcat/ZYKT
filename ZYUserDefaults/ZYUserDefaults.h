@@ -4,8 +4,7 @@
 //
 //  Created by 张祎 on 2020/5/7.
 //  Update  by 张祎 on 2022/1/24 使用强类型进行优化处理 防止类型不同污染本地化存储
-//  Version 2.0
-//  https://github.com/objcat/ZYUserDefaults
+//  Version 0.1.1
 
 #import <Foundation/Foundation.h>
 
