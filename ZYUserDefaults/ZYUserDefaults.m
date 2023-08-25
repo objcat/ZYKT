@@ -31,12 +31,13 @@
         // 设置zy_env路径
         info.zy_env = [[NSUserDefaults alloc] initWithSuiteName:@"zy_env"];
         // 设置ud路径
-        info.ud = [[NSUserDefaults alloc] initWithSuiteName:@"zy_ud"];
+        NSString *ud_name = [NSString stringWithFormat:@"zy_ud_%@", NSStringFromClass([self class])];
+        info.ud = [[NSUserDefaults alloc] initWithSuiteName:ud_name];
         // 绑定数据
         [info bindData];
         // 监听数据变化
         [info addObserver];
-        NSLog(@"ZYUserDefaults启动成功, 保存路径: \n %@/Preferences/zy_ud.plist", [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject]);
+        NSLog(@"%@启动成功, 保存路径: \n %@/Preferences/%@.plist", NSStringFromClass([self class]), [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject], ud_name);
     }
     return info;
 }
