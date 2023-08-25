@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D77DF882A9901800050EBFE /* EHFormResources.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D77DF872A9901800050EBFE /* EHFormResources.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2DBF7C5C2A988A7F00324641 /* ZYTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C5A2A988A7F00324641 /* ZYTitleTableViewCell.m */; };
 		2DBF7C5D2A988A7F00324641 /* ZYTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF7C5B2A988A7F00324641 /* ZYTitleTableViewCell.xib */; };
-		2DBF7C5F2A988D2600324641 /* EHFormResources.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2DBF7C5E2A988D2600324641 /* EHFormResources.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2DBF7C632A988E9B00324641 /* TestZYUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C622A988E9B00324641 /* TestZYUserDefaultsViewController.m */; };
 		2DBF7C7E2A98993200324641 /* ZYNormalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C7D2A98993200324641 /* ZYNormalStore.m */; };
 		2DBF7C822A98999100324641 /* ZYKTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C812A98999100324641 /* ZYKTBaseViewController.m */; };
@@ -32,17 +32,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				2DBF7C5F2A988D2600324641 /* EHFormResources.bundle in CopyFiles */,
+				2D77DF882A9901800050EBFE /* EHFormResources.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D77DF872A9901800050EBFE /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormResources.bundle; path = "../Carthage/Build/EHFormKit.xcframework/ios-arm64_x86_64-simulator/EHFormKit.framework/EHFormResources.bundle"; sourceTree = "<group>"; };
 		2DBF7C592A988A7F00324641 /* ZYTitleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTitleTableViewCell.h; sourceTree = "<group>"; };
 		2DBF7C5A2A988A7F00324641 /* ZYTitleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTitleTableViewCell.m; sourceTree = "<group>"; };
 		2DBF7C5B2A988A7F00324641 /* ZYTitleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZYTitleTableViewCell.xib; sourceTree = "<group>"; };
-		2DBF7C5E2A988D2600324641 /* EHFormResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormResources.bundle; path = "../Carthage/Build/EHFormKit.xcframework/ios-arm64_x86_64-simulator/EHFormKit.framework/EHFormResources.bundle"; sourceTree = "<group>"; };
 		2DBF7C612A988E9B00324641 /* TestZYUserDefaultsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestZYUserDefaultsViewController.h; sourceTree = "<group>"; };
 		2DBF7C622A988E9B00324641 /* TestZYUserDefaultsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestZYUserDefaultsViewController.m; sourceTree = "<group>"; };
 		2DBF7C7C2A98993200324641 /* ZYNormalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYNormalStore.h; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		2DF9ACCE2A972FFA006F0F56 = {
 			isa = PBXGroup;
 			children = (
-				2DBF7C5E2A988D2600324641 /* EHFormResources.bundle */,
+				2D77DF872A9901800050EBFE /* EHFormResources.bundle */,
 				2DF9ACD92A972FFA006F0F56 /* ZYKTDemo */,
 				2DF9ACD82A972FFA006F0F56 /* Products */,
 				2DF9ACF32A973035006F0F56 /* Frameworks */,
