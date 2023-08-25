@@ -24,7 +24,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.arrowImageView.image = [[UIImage imageNamed:@"EHFormResources.bundle/arrow"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.arrowImageView.image = [[UIImage imageNamed:@"EHFormKitResources.bundle/arrow"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     self.arrowImageView.tintColor = [UIColor colorWithRed:153 / 255.0 green:153 / 255.0 blue:153 / 255.0 alpha:1];
 }
 
