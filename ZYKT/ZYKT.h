@@ -17,4 +17,5 @@ FOUNDATION_EXPORT const unsigned char ZYKTVersionString[];
 
 #import <ZYKT/ZYUserDefaults.h>
 #import <ZYKT/ZYDeviceManager.h>
+#import <ZYKT/ZYBaseViewController.h>
 
