@@ -23,16 +23,23 @@
 
 
 /**
- 使用方法
+ -> 实现原理:
  
- 新建一个类继承于`ZYUserDefaults`写入以下内容, 假如叫`ExampleUserDefaults`
+ 不要一惊一乍的, 其实这就是个Model+KVO+NSUserDefaults
+ 目前它的弱点是, 存放变量到NSUserDefaults有延迟, 如果存放后直接杀死进程就会出现存不住的问题, 所以请不要暴力搞, 有人会问如果是这样我存完直接使用可以吗, 答案是可以的, 因为存放变量有两份, 一份在Model上, 一份在NSUserDefaults中
  
- #import "ZYUserDefaults.h"
+ 当存入变量的时候就会触发KVO, 这时候变量已经会先判断类型, 如果与定义的变量不一致就把NSUserDefaults置空, 一致就直接存
+ 
+ -> 使用方法
+ 
+ 新建一个类继承于`ZYAbstractUserDefaults`写入以下内容, 假如叫`ExampleUserDefaults`
+ 
+ #import "ZYAbstractUserDefaults.h"
  #import <UIKit/UIKit.h>
 
- #define x_store ExampleUserDefaults.shareInstance
+ #define x_store ExampleStore.shareInstance
 
- @interface ExampleUserDefaults : ZYUserDefaults
+ @interface ExampleStore : ZYAbstractUserDefaults
  @property (strong, nonatomic) NSString *testString;
  @property (strong, nonatomic) NSNumber *testNumber;
  @property (strong, nonatomic) NSArray *testArray;
@@ -57,7 +64,6 @@
  然后创建pch文件, 把头文件放进去
  
  使用如下:
- x_store.env = ZYEnvironmentDev;
  x_store.testString = @"123";
  x_store.testNumber = @(666);
  x_store.testArray = @[@"1", @"2", @"3"];

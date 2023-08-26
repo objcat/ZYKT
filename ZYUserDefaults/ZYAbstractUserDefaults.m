@@ -74,8 +74,8 @@
 
 /// KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    id value = [object valueForKey:keyPath];
-    [self safeSetObjectWithStore:self.ud key:keyPath value:value];
+    // 给NSUserDefaults赋值, 因为没有涉及到自身变量, 所以不会递归
+    [self safeSetObjectWithStore:self.ud key:keyPath value:[object valueForKey:keyPath]];
 }
 
 /// 获取属性列表
@@ -158,46 +158,54 @@
     [self.ud synchronize];
 }
 
-/// 安全设置值
+/// 安全设置值给Store
 /// - Parameters:
 ///   - store: NSUserDefaults
 ///   - key: 键
 ///   - value: 值
 - (void)safeSetObjectWithStore:(NSUserDefaults *)store key:(id)key value:(id)value {
+    // 获取class
     Class cls = [self classFromKey:key];
+    // 判断值和类的类型是否一致
     if ([value isKindOfClass:cls]) {
-        // 如果类型正确设置正确的值
+        // 如果类型一致就直接赋值
         [store setObject:value forKey:key];
     } else {
         
 #ifdef DEBUG
         NSLog(@"key=%@ 的`值类型 (%@)`与`属性类型 (%@)`不符合 被直接置空!", key, value, cls);
 #endif
-        // 如果类型错误直接设为空
+        // 如果类型不一致就设为空
         [store setObject:nil forKey:key];
     }
 }
 
+/// 安全设置值给成员变量(切勿用在KVO否则会递归)
+/// - Parameters:
+///   - key: 键
+///   - value: 值
 - (void)safeSetValueForKey:(NSString *)key value:(id)value {
+    // 获取类型
     Class cls = [self classFromKey:key];
     if (value == nil) {
         // 如果值为空, 就把数值变为nil或0
-        [self safeSetNilValueForKey:key];
+        [self safeSetNilValueForKey:key cls:cls];
     } else {
         if ([value isKindOfClass:cls]) {
             [self setValue:value forKey:key];
         } else {
-            [self safeSetNilValueForKey:key];
+            // 如果类型不同, 也把数值变为nil或0
+            [self safeSetNilValueForKey:key cls:cls];
         }
     }
 }
 
 /// 安全设置空值
 /// - Parameter key: 键
-- (void)safeSetNilValueForKey:(NSString *)key {
-    Class cls = [self classFromKey:key];
-    // 如果是NSNumber类型的就置为0
+- (void)safeSetNilValueForKey:(NSString *)key cls:(Class)cls{
+    // 判断变量原类型
     if ([cls isEqual:[NSNumber class]]) {
+        // 如果是NSNumber就设置为@(0)
         [self setValue:@(0) forKey:key];
     } else {
         // 如果是对象类型的就置为nil
