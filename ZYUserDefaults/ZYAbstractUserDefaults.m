@@ -15,7 +15,7 @@
 /// 属性列表
 @property (strong, nonatomic) NSMutableArray *propertyList;
 /// 类型列表
-@property (strong, nonatomic) NSMutableDictionary *typeList;
+@property (strong, nonatomic) NSMutableDictionary <NSString *, Class> *typeDictionary;
 @end
 
 @implementation ZYAbstractUserDefaults
@@ -42,11 +42,11 @@
     return info;
 }
 
-- (NSMutableDictionary *)typeList {
-    if (!_typeList) {
-        _typeList = [NSMutableDictionary dictionary];
+- (NSMutableDictionary *)typeDictionary {
+    if (!_typeDictionary) {
+        _typeDictionary = [NSMutableDictionary dictionary];
     }
-    return _typeList;
+    return _typeDictionary;
 }
 
 /// 绑定数据 目前仅用于初始化
@@ -108,7 +108,7 @@
             objc_property_t property = propertyArray[i];
             NSString *key = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
             NSString *type = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
-            self.typeList[key] = type ? : @"";
+            self.typeDictionary[key] = [self classFromKey:key type:type];
             [keyArray addObject:key];
         }
         // 释放属性列表
@@ -189,6 +189,8 @@
     }
 }
 
+/// 安全设置空值
+/// - Parameter key: 键
 - (void)safeSetNilValueForKey:(NSString *)key {
     Class cls = [self classFromKey:key];
     // 如果是NSNumber类型的就置为0
@@ -203,6 +205,12 @@
 /// 判断类型
 /// - Parameter key: 根据键从typeList取出类型并转换成Class
 - (Class)classFromKey:(NSString *)key {
+    return self.typeDictionary[key];
+}
+
+/// 判断类型
+/// - Parameter key: 根据键从typeList取出类型并转换成Class
+- (Class)classFromKey:(NSString *)key type:(NSString *)type {
     NSString *type = self.typeList[key];
     if ([type hasPrefix:@"T@"]) {
         NSString *clsName = [self zy_firstMatchWithPartten:@"(?<=^T@\").*(?=\")" text:type];
@@ -210,9 +218,8 @@
     } else if ([type hasPrefix:@"T"]) {
         return [NSNumber class];
     } else {
-        NSAssert(NO, @"未知类型");
+        return nil;
     }
-    return nil;
 }
 
 - (NSString *)zy_firstMatchWithPartten:(NSString *)pattern text:(NSString *)text {
