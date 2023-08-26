@@ -16,6 +16,9 @@
 /// 清空所有数据
 - (void)clean;
 
+/// 打印变量
+- (void)logPropertys;
+
 @end
 
 

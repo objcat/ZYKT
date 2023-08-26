@@ -104,6 +104,10 @@
         NSLog(@"%@", x_store);
     }];
     
+    [self.tableView addNormalRowWithName:@"打印properties" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:44 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
+        [x_store logPropertys];
+    }];
+    
 }
 
 @end

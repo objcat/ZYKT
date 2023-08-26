@@ -69,7 +69,7 @@
 
 // 忽略bindData的属性
 - (NSArray *)ignore_properties {
-    return @[@"propertyList", @"ud", @"typeList"];
+    return @[@"propertyList", @"ud", @"typeDictionary"];
 }
 
 /// KVO
@@ -84,6 +84,7 @@
         NSMutableArray *tempArray = [NSMutableArray array];
         NSArray *keys = [self zy_propertity_keys];
         for (NSString *key in keys) {
+            // 在属性列表里排除三个
             if ([self.ignore_properties containsObject:key]) {
                 continue;
             }
@@ -108,7 +109,9 @@
             objc_property_t property = propertyArray[i];
             NSString *key = [NSString stringWithCString:property_getName(property) encoding:NSUTF8StringEncoding];
             NSString *type = [NSString stringWithCString:property_getAttributes(property) encoding:NSUTF8StringEncoding];
-            self.typeDictionary[key] = [self classFromKey:key type:type];
+            if (![self.ignore_properties containsObject:key]) {
+                self.typeDictionary[key] = [self classFromType:type];
+            }
             [keyArray addObject:key];
         }
         // 释放属性列表
@@ -210,8 +213,7 @@
 
 /// 判断类型
 /// - Parameter key: 根据键从typeList取出类型并转换成Class
-- (Class)classFromKey:(NSString *)key type:(NSString *)type {
-    NSString *type = self.typeList[key];
+- (Class)classFromType:(NSString *)type {
     if ([type hasPrefix:@"T@"]) {
         NSString *clsName = [self zy_firstMatchWithPartten:@"(?<=^T@\").*(?=\")" text:type];
         return NSClassFromString(clsName);
@@ -229,6 +231,13 @@
 
 - (void)dealloc {
     // 由于是单例 所以不用担心释放的问题 固不用移除
+}
+
+- (void)logPropertys {
+    NSArray *propertyList = self.propertyList;
+    NSDictionary *typeDictionary = self.typeDictionary;
+    NSLog(@"%@", propertyList);
+    NSLog(@"%@", typeDictionary);
 }
 
 @end
