@@ -55,7 +55,7 @@
 		2DBF7C832A9899F700324641 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		2DBF7C872A98A1B600324641 /* ExampleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleStore.h; sourceTree = "<group>"; };
 		2DBF7C882A98A1B600324641 /* ExampleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleStore.m; sourceTree = "<group>"; };
-		2DBFAB712A973F5400F371F7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = install.sh; path = ../../install.sh; sourceTree = "<group>"; };
+		2DBFAB712A973F5400F371F7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install.sh; sourceTree = "<group>"; };
 		2DBFAB772A97459E00F371F7 /* EHFormKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EHFormKit.xcframework; path = ../Carthage/Build/EHFormKit.xcframework; sourceTree = "<group>"; };
 		2DF9ACD72A972FFA006F0F56 /* ZYKTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYKTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DF9ACDA2A972FFA006F0F56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		2DF9ACE92A972FFD006F0F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DF9ACEB2A972FFD006F0F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DF9ACEC2A972FFD006F0F56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2DF9ACF82A97321F006F0F56 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Cartfile; path = ../../Cartfile; sourceTree = "<group>"; };
+		2DF9ACF82A97321F006F0F56 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +82,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4D8DB72A99A222007D0007 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFAB712A973F5400F371F7 /* install.sh */,
+				2DF9ACF82A97321F006F0F56 /* Cartfile */,
+				2DF9ACDA2A972FFA006F0F56 /* AppDelegate.h */,
+				2DF9ACDB2A972FFA006F0F56 /* AppDelegate.m */,
+				2DF9ACE32A972FFB006F0F56 /* Main.storyboard */,
+				2DF9ACE62A972FFD006F0F56 /* Assets.xcassets */,
+				2DF9ACE82A972FFD006F0F56 /* LaunchScreen.storyboard */,
+				2DF9ACEB2A972FFD006F0F56 /* Info.plist */,
+				2DF9ACEC2A972FFD006F0F56 /* main.m */,
+				2DBF7C832A9899F700324641 /* PrefixHeader.pch */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		2DBF7C542A98836B00324641 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,16 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				2DBF7C542A98836B00324641 /* Classes */,
-				2DBFAB712A973F5400F371F7 /* install.sh */,
-				2DF9ACF82A97321F006F0F56 /* Cartfile */,
-				2DF9ACDA2A972FFA006F0F56 /* AppDelegate.h */,
-				2DF9ACDB2A972FFA006F0F56 /* AppDelegate.m */,
-				2DF9ACE32A972FFB006F0F56 /* Main.storyboard */,
-				2DF9ACE62A972FFD006F0F56 /* Assets.xcassets */,
-				2DF9ACE82A972FFD006F0F56 /* LaunchScreen.storyboard */,
-				2DF9ACEB2A972FFD006F0F56 /* Info.plist */,
-				2DF9ACEC2A972FFD006F0F56 /* main.m */,
-				2DBF7C832A9899F700324641 /* PrefixHeader.pch */,
+				2D4D8DB72A99A222007D0007 /* SupportingFiles */,
 			);
 			path = ZYKTDemo;
 			sourceTree = "<group>";
