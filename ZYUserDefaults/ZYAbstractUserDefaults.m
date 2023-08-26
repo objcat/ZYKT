@@ -10,8 +10,11 @@
 #import "objc/runtime.h"
 
 @interface ZYAbstractUserDefaults ()
+/// 主要NSUserDefaults
 @property (strong, nonatomic) NSUserDefaults *ud;
+/// 属性列表
 @property (strong, nonatomic) NSMutableArray *propertyList;
+/// 类型列表
 @property (strong, nonatomic) NSMutableDictionary *typeList;
 @end
 
@@ -152,15 +155,20 @@
     [self.ud synchronize];
 }
 
+/// 安全设置值
+/// - Parameters:
+///   - store: NSUserDefaults
+///   - key: 键
+///   - value: 值
 - (void)safeSetObjectWithStore:(NSUserDefaults *)store key:(id)key value:(id)value {
     Class cls = [self classFromKey:key];
     if ([value isKindOfClass:cls]) {
         // 如果类型正确设置正确的值
         [store setObject:value forKey:key];
     } else {
-           
+        
 #ifdef DEBUG
-        NSLog(@"key=%@ 的`值类型 (%@)`与`属性类型 (%@)`不符 被直接置空!", key, value, cls);
+        NSLog(@"key=%@ 的`值类型 (%@)`与`属性类型 (%@)`不符合 被直接置空!", key, value, cls);
 #endif
         // 如果类型错误直接设为空
         [store setObject:nil forKey:key];
@@ -183,13 +191,17 @@
 
 - (void)safeSetNilValueForKey:(NSString *)key {
     Class cls = [self classFromKey:key];
+    // 如果是NSNumber类型的就置为0
     if ([cls isEqual:[NSNumber class]]) {
         [self setValue:@(0) forKey:key];
     } else {
+        // 如果是对象类型的就置为nil
         [self setValue:nil forKey:key];
     }
 }
 
+/// 判断类型
+/// - Parameter key: 根据键从typeList取出类型并转换成Class
 - (Class)classFromKey:(NSString *)key {
     NSString *type = self.typeList[key];
     if ([type hasPrefix:@"T@"]) {
