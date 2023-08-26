@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4D8DB62A9992A7007D0007 /* ZYEnvStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D8DB52A9992A7007D0007 /* ZYEnvStore.m */; };
 		2D77DF8C2A9905040050EBFE /* EHFormKitResources.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2D77DF8B2A9905040050EBFE /* EHFormKitResources.bundle */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2DBF7C5C2A988A7F00324641 /* ZYTitleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C5A2A988A7F00324641 /* ZYTitleTableViewCell.m */; };
 		2DBF7C5D2A988A7F00324641 /* ZYTitleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DBF7C5B2A988A7F00324641 /* ZYTitleTableViewCell.xib */; };
 		2DBF7C632A988E9B00324641 /* TestZYUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C622A988E9B00324641 /* TestZYUserDefaultsViewController.m */; };
 		2DBF7C7E2A98993200324641 /* ZYNormalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C7D2A98993200324641 /* ZYNormalStore.m */; };
 		2DBF7C822A98999100324641 /* ZYKTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C812A98999100324641 /* ZYKTBaseViewController.m */; };
-		2DBF7C892A98A1B600324641 /* ExampleUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C882A98A1B600324641 /* ExampleUserDefaults.m */; };
+		2DBF7C892A98A1B600324641 /* ExampleStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C882A98A1B600324641 /* ExampleStore.m */; };
 		2DBFAB722A973F5400F371F7 /* install.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2DBFAB712A973F5400F371F7 /* install.sh */; };
 		2DBFAB7F2A97467B00F371F7 /* EHFormKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBFAB772A97459E00F371F7 /* EHFormKit.xcframework */; };
 		2DF9ACDC2A972FFA006F0F56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF9ACDB2A972FFA006F0F56 /* AppDelegate.m */; };
@@ -39,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D4D8DB42A9992A7007D0007 /* ZYEnvStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYEnvStore.h; sourceTree = "<group>"; };
+		2D4D8DB52A9992A7007D0007 /* ZYEnvStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYEnvStore.m; sourceTree = "<group>"; };
 		2D77DF8B2A9905040050EBFE /* EHFormKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = EHFormKitResources.bundle; path = "../Carthage/Build/EHFormKit.xcframework/ios-arm64_x86_64-simulator/EHFormKit.framework/EHFormKitResources.bundle"; sourceTree = "<group>"; };
 		2DBF7C592A988A7F00324641 /* ZYTitleTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTitleTableViewCell.h; sourceTree = "<group>"; };
 		2DBF7C5A2A988A7F00324641 /* ZYTitleTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTitleTableViewCell.m; sourceTree = "<group>"; };
@@ -50,8 +53,8 @@
 		2DBF7C802A98999100324641 /* ZYKTBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKTBaseViewController.h; sourceTree = "<group>"; };
 		2DBF7C812A98999100324641 /* ZYKTBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYKTBaseViewController.m; sourceTree = "<group>"; };
 		2DBF7C832A9899F700324641 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		2DBF7C872A98A1B600324641 /* ExampleUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleUserDefaults.h; sourceTree = "<group>"; };
-		2DBF7C882A98A1B600324641 /* ExampleUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleUserDefaults.m; sourceTree = "<group>"; };
+		2DBF7C872A98A1B600324641 /* ExampleStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleStore.h; sourceTree = "<group>"; };
+		2DBF7C882A98A1B600324641 /* ExampleStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleStore.m; sourceTree = "<group>"; };
 		2DBFAB712A973F5400F371F7 /* install.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = install.sh; path = ../../install.sh; sourceTree = "<group>"; };
 		2DBFAB772A97459E00F371F7 /* EHFormKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = EHFormKit.xcframework; path = ../Carthage/Build/EHFormKit.xcframework; sourceTree = "<group>"; };
 		2DF9ACD72A972FFA006F0F56 /* ZYKTDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYKTDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,8 +94,8 @@
 		2DBF7C552A98837100324641 /* ZYUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				2DBF7C872A98A1B600324641 /* ExampleUserDefaults.h */,
-				2DBF7C882A98A1B600324641 /* ExampleUserDefaults.m */,
+				2DBF7C872A98A1B600324641 /* ExampleStore.h */,
+				2DBF7C882A98A1B600324641 /* ExampleStore.m */,
 				2DBF7C612A988E9B00324641 /* TestZYUserDefaultsViewController.h */,
 				2DBF7C622A988E9B00324641 /* TestZYUserDefaultsViewController.m */,
 			);
@@ -123,6 +126,8 @@
 			children = (
 				2DBF7C7C2A98993200324641 /* ZYNormalStore.h */,
 				2DBF7C7D2A98993200324641 /* ZYNormalStore.m */,
+				2D4D8DB42A9992A7007D0007 /* ZYEnvStore.h */,
+				2D4D8DB52A9992A7007D0007 /* ZYEnvStore.m */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -268,11 +273,12 @@
 				2DBF7C632A988E9B00324641 /* TestZYUserDefaultsViewController.m in Sources */,
 				2DF9ACE22A972FFB006F0F56 /* MainViewController.m in Sources */,
 				2DBF7C5C2A988A7F00324641 /* ZYTitleTableViewCell.m in Sources */,
-				2DBF7C892A98A1B600324641 /* ExampleUserDefaults.m in Sources */,
+				2DBF7C892A98A1B600324641 /* ExampleStore.m in Sources */,
 				2DBF7C822A98999100324641 /* ZYKTBaseViewController.m in Sources */,
 				2DBF7C7E2A98993200324641 /* ZYNormalStore.m in Sources */,
 				2DF9ACDC2A972FFA006F0F56 /* AppDelegate.m in Sources */,
 				2DF9ACED2A972FFD006F0F56 /* main.m in Sources */,
+				2D4D8DB62A9992A7007D0007 /* ZYEnvStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,10 +5,10 @@
 //  Created by objcat on 2023/8/25.
 //
 
-#import <ZYKT/ZYUserDefaults.h>
+#import <ZYKT/ZYAbstractUserDefaults.h>
 
 #define n_store ZYNormalStore.shareInstance
 
-@interface ZYNormalStore : ZYUserDefaults
+@interface ZYNormalStore : ZYAbstractUserDefaults
 @property (strong, nonatomic) NSString *saveClass;
 @end

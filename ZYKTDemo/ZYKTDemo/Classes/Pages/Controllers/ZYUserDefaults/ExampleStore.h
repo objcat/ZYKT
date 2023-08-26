@@ -1,17 +1,17 @@
 //
-//  ExampleUserDefaults.h
+//  ExampleStore.h
 //  ZYUserDefaults
 //
 //  Created by objcat on 2022/1/26.
 //  Copyright © 2022 objcat. All rights reserved.
 //
 
-#import <ZYKT/ZYUserDefaults.h>
+#import <ZYKT/ZYAbstractUserDefaults.h>
 #import <UIKit/UIKit.h>
 
-#define x_store ExampleUserDefaults.shareInstance
+#define x_store ExampleStore.shareInstance
 
-@interface ExampleUserDefaults : ZYUserDefaults
+@interface ExampleStore : ZYAbstractUserDefaults
 @property (strong, nonatomic) NSString *testString;
 @property (strong, nonatomic) NSNumber *testNumber;
 @property (strong, nonatomic) NSArray *testArray;

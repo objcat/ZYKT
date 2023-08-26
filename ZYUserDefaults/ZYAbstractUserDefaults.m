@@ -6,17 +6,16 @@
 //  Copyright © 2020 objcat. All rights reserved.
 //
 
-#import "ZYUserDefaults.h"
+#import "ZYAbstractUserDefaults.h"
 #import "objc/runtime.h"
 
-@interface ZYUserDefaults ()
+@interface ZYAbstractUserDefaults ()
 @property (strong, nonatomic) NSUserDefaults *ud;
-@property (strong, nonatomic) NSUserDefaults *zy_env;
 @property (strong, nonatomic) NSMutableArray *propertyList;
 @property (strong, nonatomic) NSMutableDictionary *typeList;
 @end
 
-@implementation ZYUserDefaults
+@implementation ZYAbstractUserDefaults
 
 /**
  *  单例
@@ -24,12 +23,10 @@
 + (instancetype)shareInstance {
     static NSMutableDictionary *storeDic = nil;
     if (storeDic == nil) { storeDic = [NSMutableDictionary dictionary]; }
-    ZYUserDefaults *info = storeDic[NSStringFromClass(self.class)];
+    ZYAbstractUserDefaults *info = storeDic[NSStringFromClass(self.class)];
     if (info == nil) {
         info = [[[self class] alloc] init];
         storeDic[NSStringFromClass(self.class)] = info;
-        // 设置zy_env路径
-        info.zy_env = [[NSUserDefaults alloc] initWithSuiteName:@"zy_env"];
         // 设置ud路径
         NSString *ud_name = [NSString stringWithFormat:@"zy_ud_%@", NSStringFromClass([self class])];
         info.ud = [[NSUserDefaults alloc] initWithSuiteName:ud_name];
@@ -53,13 +50,8 @@
 - (void)bindData {
     for (NSString *propertyName in self.propertyList) {
         id value;
-        if ([propertyName isEqualToString:@"env"]) {
-            // 存储环境
-            value = [self.zy_env objectForKey:propertyName];
-        } else {
-            // 存储普通变量
-            value = [self.ud objectForKey:propertyName];
-        }
+        // 存储普通变量
+        value = [self.ud objectForKey:propertyName];
         // 安全赋值
         [self safeSetValueForKey:propertyName value:value];
     }
@@ -74,18 +66,13 @@
 
 // 忽略bindData的属性
 - (NSArray *)ignore_properties {
-    return @[@"propertyList", @"zy_env", @"ud", @"typeList", @"env"];
+    return @[@"propertyList", @"ud", @"typeList"];
 }
 
 /// KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     id value = [object valueForKey:keyPath];
-    if ([keyPath isEqualToString:@"environment"]) {
-        // 保存环境的变量单独放在env, 防止clean时改变环境
-        [self.zy_env setObject:value forKey:keyPath];
-    } else {
-        [self safeSetObjectWithStore:self.ud key:keyPath value:value];
-    }
+    [self safeSetObjectWithStore:self.ud key:keyPath value:value];
 }
 
 /// 获取属性列表
@@ -136,9 +123,6 @@
 /// 打印模型
 - (NSString *)description {
     NSString *result = [NSMutableString string];
-    /// 打印环境
-    NSString *propertyKeyValue = [NSString stringWithFormat:@"env %@", [self valueForKey:@"env"]];
-    result = [NSString stringWithFormat:@"%@ \n %@", result, propertyKeyValue];
     /// 打印值
     for (NSString *propertyName in self.propertyList) {
         NSString *propertyKeyValue = [NSString stringWithFormat:@"%@ %@", propertyName, [self valueForKey:propertyName]];

@@ -8,17 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, ZYEnvironment) {
-    /// 生产环境
-    ZYEnvironmentProduction,
-    /// 开发环境
-    ZYEnvironmentDev
-};
-
-@interface ZYUserDefaults : NSObject
-
-/// 环境
-@property (assign, nonatomic) ZYEnvironment env;
+@interface ZYAbstractUserDefaults : NSObject
 
 /// 单例初始化
 + (instancetype)shareInstance;

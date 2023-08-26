@@ -10,8 +10,8 @@
 		2D1FD83B2A847CC500E5A48B /* ZYDeviceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D1FD8392A847CC500E5A48B /* ZYDeviceManager.m */; };
 		2D1FD83C2A847CC500E5A48B /* ZYDeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D1FD83A2A847CC500E5A48B /* ZYDeviceManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */; };
+		2D2F7D5D2A7CDABA00FFE961 /* ZYAbstractUserDefaults.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D2F7D5B2A7CDABA00FFE961 /* ZYAbstractUserDefaults.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D2F7D5E2A7CDABA00FFE961 /* ZYAbstractUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D2F7D5C2A7CDABA00FFE961 /* ZYAbstractUserDefaults.m */; };
 		2DBF7C6D2A9894A200324641 /* ZYBaseNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DBF7C672A9894A100324641 /* ZYBaseNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DBF7C6E2A9894A200324641 /* ZYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF7C682A9894A100324641 /* ZYBaseNavigationController.m */; };
 		2DBF7C6F2A9894A200324641 /* ZYBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DBF7C692A9894A200324641 /* ZYBaseViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,8 +23,8 @@
 		2D1FD83A2A847CC500E5A48B /* ZYDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYDeviceManager.h; sourceTree = "<group>"; };
 		2D2F7D492A7CCD4400FFE961 /* ZYKT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZYKT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D2F7D4C2A7CCD4400FFE961 /* ZYKT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYKT.h; sourceTree = "<group>"; };
-		2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYUserDefaults.h; sourceTree = "<group>"; };
-		2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYUserDefaults.m; sourceTree = "<group>"; };
+		2D2F7D5B2A7CDABA00FFE961 /* ZYAbstractUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYAbstractUserDefaults.h; sourceTree = "<group>"; };
+		2D2F7D5C2A7CDABA00FFE961 /* ZYAbstractUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYAbstractUserDefaults.m; sourceTree = "<group>"; };
 		2DBF7C672A9894A100324641 /* ZYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBaseNavigationController.h; sourceTree = "<group>"; };
 		2DBF7C682A9894A100324641 /* ZYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBaseNavigationController.m; sourceTree = "<group>"; };
 		2DBF7C692A9894A200324641 /* ZYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBaseViewController.h; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		2D2F7D5A2A7CDABA00FFE961 /* ZYUserDefaults */ = {
 			isa = PBXGroup;
 			children = (
-				2D2F7D5B2A7CDABA00FFE961 /* ZYUserDefaults.h */,
-				2D2F7D5C2A7CDABA00FFE961 /* ZYUserDefaults.m */,
+				2D2F7D5B2A7CDABA00FFE961 /* ZYAbstractUserDefaults.h */,
+				2D2F7D5C2A7CDABA00FFE961 /* ZYAbstractUserDefaults.m */,
 			);
 			path = ZYUserDefaults;
 			sourceTree = "<group>";
@@ -107,7 +107,7 @@
 			files = (
 				2D2F7D4D2A7CCD4400FFE961 /* ZYKT.h in Headers */,
 				2D1FD83C2A847CC500E5A48B /* ZYDeviceManager.h in Headers */,
-				2D2F7D5D2A7CDABA00FFE961 /* ZYUserDefaults.h in Headers */,
+				2D2F7D5D2A7CDABA00FFE961 /* ZYAbstractUserDefaults.h in Headers */,
 				2DBF7C6D2A9894A200324641 /* ZYBaseNavigationController.h in Headers */,
 				2DBF7C6F2A9894A200324641 /* ZYBaseViewController.h in Headers */,
 			);
@@ -184,7 +184,7 @@
 				2D1FD83B2A847CC500E5A48B /* ZYDeviceManager.m in Sources */,
 				2DBF7C6E2A9894A200324641 /* ZYBaseNavigationController.m in Sources */,
 				2DBF7C702A9894A200324641 /* ZYBaseViewController.m in Sources */,
-				2D2F7D5E2A7CDABA00FFE961 /* ZYUserDefaults.m in Sources */,
+				2D2F7D5E2A7CDABA00FFE961 /* ZYAbstractUserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

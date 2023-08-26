@@ -26,7 +26,7 @@
     
     [self.tableView addNormalRowWithName:@"标准值测试" value:@"" cellClass:[EHTapTableViewCell class] rowHeight:44 callBack:^(EHFormModel *model, EHFormModelEventType eventType, NSDictionary *dictionary) {
         NSLog(@"%@", x_store.class);
-        x_store.env = ZYEnvironmentDev;
+        e_store.env = ZYEnvironmentProd;
         x_store.testString = @"123";
         x_store.testNumber = @(666);
         x_store.testArray = @[@"1", @"2", @"3"];
